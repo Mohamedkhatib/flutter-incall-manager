@@ -38,11 +38,11 @@ public class InCallProximityManager {
     private AppRTCProximitySensor proximitySensor = null;
 
     /** Construction */
-    static InCallProximityManager create(Context context, final FlutterIncallManagerPlugin inCallManager) {
+    static InCallProximityManager create(Context context, final com.cloudwebrtc.flutterincallmanager.FlutterIncallManagerPlugin inCallManager) {
         return new InCallProximityManager(context, inCallManager);
     }
 
-    private InCallProximityManager(Context context, final FlutterIncallManagerPlugin inCallManager) {
+    private InCallProximityManager(Context context, final com.cloudwebrtc.flutterincallmanager.FlutterIncallManagerPlugin inCallManager) {
         Log.d(TAG, "InCallProximityManager");
         checkProximitySupport(context);
         if (proximitySupported) {
